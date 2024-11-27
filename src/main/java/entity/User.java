@@ -31,8 +31,11 @@ public class User extends ChangeTrackerEntity {
     @Column(name = "password")
     private String password;
 
-    @Column(name = "superAdmin")
-    private boolean superAdmin;
+    @Column(name = "role")
+    private String role;
+
+    @Column(name = "enable")
+    private boolean enable;
 
     @OneToMany(mappedBy = "user", cascade = CascadeType.ALL)
     private List<Order> orders = new ArrayList<>();
